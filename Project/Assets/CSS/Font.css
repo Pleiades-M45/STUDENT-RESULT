@@ -1,0 +1,12 @@
+@font-face{
+    font-family:Genshin;
+    src:url(zh-cn.ttf);
+   /* font-weight:bold;*/
+}
+*{
+    font-family: Genshin;
+}
+.mn
+{
+background-color: #f45eff;
+}

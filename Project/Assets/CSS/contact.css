@@ -1,0 +1,150 @@
+
+.bye {
+
+  max-width: 1050px;
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  margin: 0 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+
+  margin-left: 13%;
+  margin-top: 120px;
+}
+.bye .complaintbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 20px;
+}
+.complaintbox .image-box {
+  max-width: 55%;
+}
+.complaintbox .image-box img {
+  width: 100%;
+}
+.complaintbox .topic {
+  font-size: 22px;
+  font-weight: 500;
+  color: #9b24c2;
+}
+.complaintbox form {
+  width: 40%;
+  margin-right: 30px;
+}
+.complaintbox .input-box {
+  height: 50px;
+  width: 100%;
+  margin: 16px 0;
+  position: relative;
+}
+.complaintbox .input-box input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  padding: 0 16px;
+  background: #fae9fb;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+.complaintbox .input-box input:focus,
+.complaintbox .input-box input:valid {
+  border-color: #9524c2;
+  background-color: #fff;
+}
+
+.complaintbox .nochange label:first-of-type{
+  top: 0;
+  left: 12px;
+  display: 14px;
+  color: #ba24c2;
+  background: #fff;
+}
+
+.complaintbox .input-box label{
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  color: #636c72;
+  font-size: 15px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+.complaintbox .input-box input:focus ~ label,
+.complaintbox .input-box input:valid ~ label {
+  top: 0;
+  left: 12px;
+  display: 14px;
+  color: #aa24c2;
+  background: #fff;
+}
+.complaintbox .message-box {
+  min-height: 150px;
+  position: relative;
+}
+.complaintbox .message-box textarea {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  resize: none;
+  background: #fae9fb;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  outline: none;
+  padding: 5px 16px;
+  transition: all 0.3s ease;
+}
+.complaintbox .message-box textarea:focus {
+  border-color: #ba24c2;
+  background-color: #fff;
+}
+.complaintbox .message-box label {
+  position: absolute;
+  font-size: 16px;
+  color: #636c72;
+  left: 18px;
+  top: 6px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.complaintbox .message-box textarea:focus ~ label {
+  left: 12px;
+  top: -10px;
+  color: #a224c2;
+  font-size: 14px;
+  background: #fff;
+}
+.complaintbox .input-box input[type="submit"] {
+  color: #fff;
+  background: #9d24c2;
+  padding-left: 0;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+.complaintbox .input-box input[type="submit"]:hover {
+  background-color: #ba4de1;
+}
+@media (max-width: 1000px) {
+  .complaintbox .image-box {
+    max-width: 70%;
+  }
+  .complaintbox {
+    padding: 10px 0;
+  }
+}
+@media (max-width: 900px) {
+  .complaintbox .image-box {
+    display: none;
+  }
+  .complaintbox form {
+    width: 100%;
+    margin-left: 30px;
+  }
+}

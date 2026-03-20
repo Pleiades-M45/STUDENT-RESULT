@@ -1,0 +1,287 @@
+* {
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+}
+
+a{
+    color:rgb(205, 202, 202);
+}
+a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+input {
+	outline: none;
+	border: none;
+}
+
+input::placeholder { 
+    color: #fff;
+    font-size: 15px;
+}
+
+input:focus::placeholder { color:transparent; }
+
+button {
+	outline: none !important;
+	border: none;
+	background: transparent;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+.limiter {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-login100 {
+  width: 100%;  
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #df64fb 0%, #b867fe  51%, #ea8bfc  100%);
+  background-image: -webkit-linear-gradient(to right, #df64fb 0%, #b867fe  51%, #ea8bfc  100%);
+}
+
+
+
+.wrap-login100 {
+  width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 55px 55px 37px 55px;
+  min-height: 80vh;
+
+  background: -moz-linear-gradient(top, #d312f6, #8c02c7);
+  background-image: linear-gradient(top, #dd3df9, #af12f3);
+  background: -webkit-linear-gradient(top, #d312f6, #8c02c7);
+  box-shadow: 0 0 5px #6923bf;
+}
+
+
+/*------------------------------------------------------------------
+[ Form ]*/
+
+.login100-form {
+  width: 100%;
+}
+
+.login100-form-title{
+    display: block;
+    font-size: 27px;
+    color: #fff;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*------------------------------------------------------------------
+[ Input ]*/
+
+.wrap-input100 {
+  width: 100%;
+  position: relative;
+  border-bottom: 2px solid rgba(255,255,255,0.24);
+  margin-bottom: 30px;
+}
+
+.input100 {
+  font-size: 14px;
+  color: #f3f7f8;
+  line-height: 1.2;
+
+  display: block;
+  width: 100%;
+  height: 45px;
+  background: transparent;
+  padding: 0 13px 0 38px;
+}
+ 
+.focus-input100 {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.focus-input100::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+
+  transition: all 0.4s;
+
+  background: #ffffff;
+}
+
+.focus-input100::after {
+
+  font-size: 20px;
+  color: #ffffff;
+
+  content: attr(data-placeholder);
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 6px;
+  left: 0px;
+  padding-left: 5px;
+
+
+  transition: all 0.4s;
+}
+
+.input100:focus {
+  padding-left: 5px;
+}
+
+.input100:focus + .focus-input100::after {
+  top: -22px;
+  font-size: 18px;
+}
+
+.input100:focus + .focus-input100::before {
+  width: 100%;
+}
+
+#togglePassword{
+  position:absolute;
+  top:50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px;
+ 
+}
+
+/*==================================================================
+[ Restyle Checkbox ]*/
+
+.contact100-form-checkbox {
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 35px;
+}
+
+.input-checkbox100 {
+  display: none;
+}
+
+.label-checkbox100 {
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.2;
+
+  display: block;
+  position: relative;
+  padding-left: 26px;
+  cursor: pointer;
+}
+
+.label-checkbox100::before{
+  
+  content: "\2713";
+  font-size: 10px;
+  color: transparent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  background: #fff;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input-checkbox100:checked + .label-checkbox100::before {
+  color: #555555;
+}
+
+
+/*------------------------------------------------------------------
+[ Button ]*/
+.container-login100-form-btn {
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.login100-form-btn {
+
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 120px;
+  height: 50px;
+  border-radius: 25px;
+
+  background: #9152f8;
+  background: -moz-linear-gradient(bottom, #9f4bef, #8405ba);
+  background: linear-gradient(bottom, #7579ff, #b224ef);
+  position: relative;
+  z-index: 1;
+
+
+  transition: all 0.4s;
+}
+
+.login100-form-btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  opacity: 1;
+
+  transition: all 0.4s;
+}
+
+.login100-form-btn:hover {
+  color: #fff;
+}
+
+.login100-form-btn:hover:before {
+  opacity: 0;
+}
+
+.forgot-password{
+    text-align:center; 
+    padding-top:90px; 
+    font-size:13px;
+}
